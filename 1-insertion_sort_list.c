@@ -6,10 +6,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *travel = (*list)->next;
+	listint_t *travel;
 
         if (!list)
                 return;
+        travel = (*list)->next;
         for (; travel; travel = travel->next)
         {
                 for (; travel->prev && travel->n < travel->prev->n;)
