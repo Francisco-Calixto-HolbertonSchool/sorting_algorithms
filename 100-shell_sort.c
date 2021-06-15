@@ -44,7 +44,7 @@ void shell_sort(int *array, size_t size)
 			}
 			array[j] = temp;
 		}
-		print_array(array, size);
 		h = (h - 1) / 3;
+		print_array(array, size);
 	}
 }
