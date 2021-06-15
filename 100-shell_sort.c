@@ -24,7 +24,7 @@ size_t knuth_det(size_t size)
  * @array: array to order
  * @size: Starting index
  */
-/*
+
 void shell_sort(int *array, size_t size)
 {
 	size_t h, i, j;
@@ -45,26 +45,6 @@ void shell_sort(int *array, size_t size)
 			array[j] = temp;
 		}
 		h = (h - 1) / 3;
-		print_array(array, size);
-	}
-}
-*/
-
-void shell_sort(int *array, size_t size)
-{
-	size_t k, i, j;
-	int tmp;
-
-	k = knuth_det(size);
-	for (; k > 0; k = (k - 1) / 3)
-	{
-		for (i = k; i < size; i++)
-		{
-			tmp = array[i];
-			for (j = i; j >= k && array[j - k] > tmp; j = j - k)
-				array[j] = array[j - k];
-			array[j] = tmp;
-		}
 		print_array(array, size);
 	}
 }
